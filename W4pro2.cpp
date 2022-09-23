@@ -1,46 +1,32 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-class Floyds_Triangle
-{
-	public:
-		int i,j,p,q,n;
-		public:
-//constructor
-			Floyds_Triangle()         			{
-             	cout<<"Please enter the no of rows";
-	            cin>>n;
-               	for(i=1;i<=n;i++)
-             	{
-		if(i%2==0)
-		{
-			p=1;
-			q=0;
-		}
-		else
-		{
-			p=0;
-			q=1;
-		}
-		for(j=1;j<=i;j++)
-		{
-			if(j%2==0)
-			{
-				cout<<p;
-			}
-			else
-			{
-				cout<<q;
-			}
-		}
-		cout<<endl;
-	}
+ 
+ class floyd_triangle{
+    private:
+    public:
+    int rows,num;
+    //constructor 
+    floyd_triangle(){
+         cout << "Enter number of rows: ";
+rows=1 ; num = 1;
+    cin >> rows;
+    }
+int print_triangle(){
+    for(int i = 1; i <= rows; i++)
+    {
+        for(int j = 1; j <= i; j++)
+        {
+            cout << num << " ";
+            num++;
+        }
+        cout << endl;
+    }
+    return 0;
 }
-	Floyds_Triangle()       // destructor
-	{
-	}
-};
-int main()
-{
-	Floyds_Triangle object;
-	return 0;
+   ~floyd_triangle(){};
+ };
+int main(){
+ floyd_triangle obj;
+ obj.print_triangle();
+    return 0;
 }
