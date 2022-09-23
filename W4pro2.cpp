@@ -1,12 +1,12 @@
 #include<iostream>
 using namespace std;
-class T4Tutorials_Floyds_Triangle
+class Floyds_Triangle
 {
 	public:
 		int i,j,p,q,n;
 		public:
 //constructor
-			T4Tutorials_Floyds_Triangle()         			{
+			Floyds_Triangle()         			{
              	cout<<"Please enter the no of rows";
 	            cin>>n;
                	for(i=1;i<=n;i++)
@@ -35,12 +35,12 @@ class T4Tutorials_Floyds_Triangle
 		cout<<endl;
 	}
 }
-	~T4Tutorials_Floyds_Triangle()       // destructor
+	Floyds_Triangle()       // destructor
 	{
 	}
 };
 int main()
 {
-	T4Tutorials_Floyds_Triangle object;
+	Floyds_Triangle object;
 	return 0;
 }
