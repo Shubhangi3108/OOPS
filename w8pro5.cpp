@@ -1,36 +1,35 @@
 #include <iostream>
 using namespace std;
- 
-class Shape
-{
+
+class Polygon {
   protected:
-    double width, height;
+    int width, height;
   public:
-    void set_data (double a, double b)
-    {
-        width = a;
-        height = b;
-    }
+    void set_values (int a, int b)
+      { width=a; height=b; }
+    virtual int area (void) =0;
 };
- 
-class Rectangle: public Shape
-{
+
+class Rectangle: public Polygon {
   public:
-    double area ()
-    {
-        return (width * height);
-    }
+    int area (void)
+      { return (width * height); }
 };
- 
- 
-int main ()
-{
-    Shape *sPtr;    //declare pointer variables of type Shape
-    Rectangle Rect; //create the object rect of type Rectangle
-    sPtr = &Rect;   //make sPtr point to the object rect.
 
-    sPtr->set_data (5,3); //set length and width of object rect 
-    cout << sPtr -> area() << endl;  //Compile Error !!
+class Triangle: public Polygon {
+  public:
+    int area (void)
+      { return (width * height / 2); }
+};
 
-    return 0;
+int main () {
+  Rectangle rect;
+  Triangle trgl;
+  Polygon * ppoly1 = &rect;
+  Polygon * ppoly2 = &trgl;
+  ppoly1->set_values (4,5);
+  ppoly2->set_values (4,5);
+  cout << ppoly1->area() << '\n';
+  cout << ppoly2->area() << '\n';
+  return 0;
 }
