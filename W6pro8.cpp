@@ -1,7 +1,8 @@
 #include<iostream>
 #include<cstdlib>
 using namespace std;
-
+class Area
+{
 float area(float r)
 {
         return(3.14 * r * r);
@@ -18,9 +19,6 @@ int main()
 {
         float b,h,r,l;
         int ch;
-
-        do
-        {
                 cout<<"\n\n *****Menu***** \n";
                 cout<<"\n 1. Area of Circle";
                 cout<<"\n 2. Area of Triangle";
@@ -56,6 +54,7 @@ int main()
                         default:
                                 cout<<"\n Invalid Choice... ";
                 }
-        }while(ch!=4);
+        }
         return 0;
+}
 }
