@@ -1,5 +1,3 @@
-// C++ program to calculate the area of a square and a circle
-
 #include <iostream>
 using namespace std;
 
