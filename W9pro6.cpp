@@ -11,8 +11,8 @@ t Sum(t a,t b)
  };
 int main()
 {
-   sum<int>int Sum(a,b);
-    sum<float>float Sum(x,y);
+   sum<int> intSum(a,b);
+    sum<float> floatSum(x,y);
     cout<<"\nEnter two integer data: ";
     cin>>a>>b;
     cout<<"\nEnter two float data: ";
