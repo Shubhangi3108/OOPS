@@ -1,7 +1,11 @@
 #include<iostream>
 using namespace std;
 
-template<class Test> Test FindLarge(Test num1,Test num2, Test num3)  
+template<class Test>
+class max
+{
+Test num1,Test num2, Test num3;
+Test FindLarge()  
 {  
         if(num1>=num2)  
         {
@@ -18,6 +22,7 @@ template<class Test> Test FindLarge(Test num1,Test num2, Test num3)
                         return num3;
         }
 }  
+};
 int main()
 {
         int num1, num2, num3, large;
