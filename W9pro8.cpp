@@ -1,46 +1,29 @@
-#include<iostream>
+include <iostream>
 using namespace std;
+ 
 
-template<class Test>
-class max
+template <typename T> T maxOfThree(T x, T y,T z)
 {
-Test num1,Test num2, Test num3;
-Test FindLarge()  
-{  
-        if(num1>=num2)  
-        {
-                if(num1>=num3)
-                        return num1;  
-                else
-                        return num3;
+    if(x>y){
+        if(x>z){
+            return x;
+        }else{
+            return z;
         }
-        else
-        {
-                if(num2 >= num3)  
-                        return num2;  
-                else  
-                        return num3;
+    }else{
+        if(y>z){
+            return y;
+        }else{
+            return z;
         }
-}  
-};
+    }
+}
+ 
 int main()
 {
-        int num1, num2, num3, large;
-    
-        cout << "\n Enter Three Numbers";
-        cout<<"\n --------------------------";
-        cout<<"\n First Number : ";
-        cin>>num1;
-   
-        cout<<"\n Second Number : ";
-        cin>>num2;
-   
-        cout<<"\n Third Number : ";
-        cin>>num3;
-
-        large=FindLarge(num1,num2,num3);
-      
-        cout<<"\n Largest Number is : "<<large;
-    
-        return 0;
+    cout << maxOfThree(3, 7,9) << endl;
+    cout << maxOfThree(3.0, 7.0,6.0) << endl;
+ 
+ 
+    return 0;
 }
