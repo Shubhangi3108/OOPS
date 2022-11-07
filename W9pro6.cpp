@@ -4,17 +4,15 @@ using namespace std;
 template<class t>
  class sum
  {
-void Sum(t a,t b) 
+t Sum(t a,t b) 
 {
     cout<<"\nSum="<<a+b<<endl;
 }
  };
 int main()
 {
-   sum<int>obj; 
-    obj.Sum();
-    sum<float>obj2;
-    obj2.Sum();
+   sum<int>int Sum(a,b);
+    sum<float>float Sum(x,y);
     cout<<"\nEnter two integer data: ";
     cin>>a>>b;
     cout<<"\nEnter two float data: ";
